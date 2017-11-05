@@ -1,6 +1,6 @@
 import React from 'react';
 import * as firebase from 'firebase';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Image, ScrollView, Animated } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 var config = {
@@ -16,8 +16,9 @@ firebase.initializeApp(config);
 
 const App = StackNavigator({
 	Home: { screen: HomeScreen },
-	Profile: { screen: ProfileScreen },
-	Reward: { screen: RewardScreen },	
+	Merchants: { screen: MerchantsScreen },
+	Crates: { screen: CratesScreen },
+	Rewards: { screen: RewardsScreen },
 });
 
 class HomeScreen extends React.Component {
